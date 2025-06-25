@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Component2 from "./components/Component2";
 import { Card, Typography } from "antd";
 import AppContext from "./hook/AppContext";
-import Greeting from "./components/Greeting";
-import ThemeToggle from "./components/ThemeToggle";
+import Greeting from "./components/Greeting"
+import ThemeToggle from "./components/ThemeToggle"
 
 const App = () => {
   const users = "MigmaDee";
@@ -13,16 +13,16 @@ const App = () => {
     en: "Hello",
     es: "Hola",
     fr: "Bonjour",
-  };
+  }
 
   const [isDarkMode, setIsDarkMode] = useState(true)
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const isDark = savedTheme === "dark" || savedTheme === null;
-    setIsDarkMode(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
-  }, []);
+    const savedTheme = localStorage.getItem("theme")
+    const isDark = savedTheme === "dark" || savedTheme === null
+    setIsDarkMode(isDark)
+    document.documentElement.classList.toggle("dark", isDark)
+  }, [])
 
   return (
     <AppContext.Provider
@@ -67,7 +67,7 @@ const App = () => {
         </Card>
       </div>
     </AppContext.Provider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
